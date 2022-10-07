@@ -1,0 +1,21 @@
+<mat-list>
+  <div *ngFor="let item of shoppingLists">
+    <mat-list-item>
+      <mat-checkbox class="example-margin" [checked]="!item.status" color="primary" (change)="changeItemStatus(item)" [ngClass]="!item.status? 'removed' : ''">
+        {{ item.content }}
+      </mat-checkbox>
+    </mat-list-item>
+  </div>
+  <div *ngIf="!shoppingLists.length">
+    No shopping item
+  </div>
+</mat-list>
+<button
+  mat-fab
+  color="primary"
+  aria-label=""
+  class="float_fab_button"
+  (click)="gotoAddPage()"
+>
+  <mat-icon>add_shopping_cart</mat-icon>
+</button>

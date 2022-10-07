@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Put your item name here</mat-label>
+    <input matInput [(ngModel)]="name">
+  </mat-form-field>
+  <button mat-raised-button class="full-width" color="primary" (click)="onAddItemToList()">OK</button>
+  <button mat-raised-button class="full-width mt-16" (click)="onBack()">Go back</button>
+</mat-card>
